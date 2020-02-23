@@ -1,8 +1,8 @@
 # docker-stafwag-squid
 
 ```Dockerfile``` to run squid inside a docker container.
-The squid daemon will run as the proxy user. The proxy/group is mapped
-to 50013 uid/gid.
+The squid daemon will run as the proxy user. The uid/gid is mapped
+50013.
 
 ## Installation
 
@@ -28,7 +28,7 @@ $ docker build -t stafwag/squid .
 ### Create a directory for the squid cache
 
 ```
-$ sudo mkdir -p home/volumes/docker/squid/cache
+$ sudo mkdir -p /home/volumes/docker/squid/cache
 $ sudo chown 50013:50013 /home/volumes/docker/squid/cache
 ```
 

@@ -6,7 +6,7 @@ RUN  groupmod proxy -g 50013
 RUN apt-get update -y
 RUN apt-get upgrade -y
 
-RUN apt-get install squid -y
+RUN apt-get install --no-install-recommends squid -y
 COPY etc/squid.conf /etc/squid/squid.conf
 
 RUN mkdir /home/proxy
@@ -18,4 +18,4 @@ WORKDIR /home/proxy
 
 EXPOSE 3128
 
-ENTRYPOINT /home/proxy/entrypoint.sh
+ENTRYPOINT ["/home/proxy/entrypoint.sh"]
