@@ -9,7 +9,7 @@ if [ ! -d "$CACHE_DIR" ]; then
 fi
 
 if [ ! -d ${CACHE_DIR}/00 ]; then
-  squid -z
+  squid -z --foreground
   sleep 2
 fi
 
