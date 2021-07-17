@@ -1,4 +1,6 @@
-FROM debian:buster
+ARG BASE_IMAGE=debian:buster
+FROM $BASE_IMAGE
+
 LABEL maintainer "staf wagemakers <staf@wagemakers.be>"
 RUN  usermod proxy -u 50013
 RUN  groupmod proxy -g 50013
